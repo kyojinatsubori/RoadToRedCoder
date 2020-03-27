@@ -1,8 +1,6 @@
-n = int(input())
+input()
 listA = map(int, input().split())
 listB = []
-flag = 0
-res = 0
 for a in listA:
     b = 0
     while a % 2 == 0:
