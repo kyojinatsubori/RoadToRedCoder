@@ -1,0 +1,5 @@
+n = int(input())
+array = list(map(int, input().split()))
+array.sort(reverse=True)
+answer = sum(array[::2]) - sum(array[1::2])
+print(answer)
