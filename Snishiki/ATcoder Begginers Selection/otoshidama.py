@@ -15,7 +15,7 @@ else :
     while a + b + c != n and a >= 0:
         d = b
         e = c
-        while a + d + e != n and d >= 0:
+        while a + d + e != n and d >= 1:
             d -= 1
             e += 5
         if a + d + e == n:
