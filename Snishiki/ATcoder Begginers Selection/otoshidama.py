@@ -16,7 +16,6 @@ else :
         d = b
         e = c
         while a + d + e != n and d >= 0:
-            print(a)
             d -= 1
             e += 5
         if a + d + e == n:
