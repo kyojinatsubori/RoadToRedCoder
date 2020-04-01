@@ -1,11 +1,7 @@
 import math
 
 a, b, c = map(int, input().split())
-if math.sqrt(a) + math.sqrt(b) < math.sqrt(c):
+if (c - a - b) ** 2 > 4 * a * b and c - a - b > 0:
     print("Yes")
-else :
+else:
     print("No")
-
-print(math.sqrt(a)
-print(b)
-print(c)
