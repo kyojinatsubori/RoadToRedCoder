@@ -1,16 +1,25 @@
-N, D, A = map(int, input().split())
-XH = [0]*N
+from math import ceil
+from collections import deque
 count = 0
-for i in range(N):
-    XH[i] = list(map(int, input().split()))
-XH.sort()
-while len(XH) > 0:
-    if XH[0][1] > 0:
-        for i in range(len(XH)):
-            if XH[i][0] <= XH[0][0] + 2* D:
-                XH[i][1] -= A
-        count += 1
-    else:
-        XH = XH[1::]
-print(count)
+ans = 0
 
+N, D, A = map(int, input().split())
+Monster = [0]*N
+for i in range(N):
+    Monster[i] = list(map(int, input().split()))
+Monster = [[x, ceil(h/A)] for x, h in Monster]
+Monster.sort()
+que = deque([])
+
+for x,h in Monster:
+    # 範囲外となったダメージを削除する
+    while que and x > que[0][0]:
+        a, b = que.popleft()
+        count -= b
+    # 範囲内で既に起きたダメージを受ける
+    need = max(0, h-count)
+    ans += need
+    count += need
+    # 爆発が届く限界と起きた回数を記録しておく
+    que.append([x + 2*D, need])
+print(ans)
