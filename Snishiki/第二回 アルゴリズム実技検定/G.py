@@ -3,13 +3,13 @@ Q = int(input())
 s = ""
 d = ""
 for i in range(Q):
-    Query = list(input().split())
-    if Query[0] == "1":
-        s = s + Query[1]*int(Query[2])
-    elif Query[0] == "2":
+    n, c ,x = input().split()
+    if n == "1":
+        s = s + c*int(x)
+    elif n == "2":
         sum = 0
-        d = s[0:int(Query[1]):]
-        s = s[int(Query[1])::]
+        d = s[0:int(c):]
+        s = s[int(c)::]
         counter = list(Counter(d).values())
         for i in counter:
             sum += i**2
