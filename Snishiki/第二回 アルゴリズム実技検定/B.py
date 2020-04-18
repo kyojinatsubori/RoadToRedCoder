@@ -1,5 +1,5 @@
 s=input()
-an=s.count("A")
+an=s.count("a")
 ans="a"
 if an<s.count("b"):
     ans="b"
