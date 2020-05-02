@@ -1,5 +1,2 @@
-S, W = map(int,input().split())
-if W >= S:
-    print("unsafe")
-else:
-    print("safe")
+
+print (15 & 4)
