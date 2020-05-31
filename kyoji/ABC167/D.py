@@ -4,7 +4,7 @@ i=0
 pasta=[1]
 memo=[0]*n
 while True:
-    if memo[a[i]-1]==1:
+    if memo[a[i]-1]>0:
         roopy=pasta.index(a[i])
         roop=pasta[roopy:]
         break
